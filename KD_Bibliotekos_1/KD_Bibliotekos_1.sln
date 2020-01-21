@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KD_Bibliotekos_1", "KD_Bibliotekos_1\KD_Bibliotekos_1.csproj", "{CC29B9C2-F8A7-4085-8B13-94650EAFFD38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStruct", "BookStruct\BookStruct.csproj", "{490B865F-A0DF-4FE5-885F-94EB71AB4902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStrukt.test", "BookStrukt.test\BookStrukt.test.csproj", "{D69E895B-68BA-4923-B720-22B6F69093D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CC29B9C2-F8A7-4085-8B13-94650EAFFD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC29B9C2-F8A7-4085-8B13-94650EAFFD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC29B9C2-F8A7-4085-8B13-94650EAFFD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490B865F-A0DF-4FE5-885F-94EB71AB4902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490B865F-A0DF-4FE5-885F-94EB71AB4902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490B865F-A0DF-4FE5-885F-94EB71AB4902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490B865F-A0DF-4FE5-885F-94EB71AB4902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69E895B-68BA-4923-B720-22B6F69093D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69E895B-68BA-4923-B720-22B6F69093D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69E895B-68BA-4923-B720-22B6F69093D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69E895B-68BA-4923-B720-22B6F69093D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
