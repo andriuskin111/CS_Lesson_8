@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdSavarankiskasDarbasDu", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalmeStruct", "PalmeStruct\PalmeStruct.csproj", "{7469ECC0-8D2C-453C-9666-232E71F32CA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdSavarankiskasDarbasDu.test", "NdSavarankiskasDarbasDu.test\NdSavarankiskasDarbasDu.test.csproj", "{4CB7DD10-7B92-4D1A-8A9B-12D54951C51A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7469ECC0-8D2C-453C-9666-232E71F32CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7469ECC0-8D2C-453C-9666-232E71F32CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7469ECC0-8D2C-453C-9666-232E71F32CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB7DD10-7B92-4D1A-8A9B-12D54951C51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB7DD10-7B92-4D1A-8A9B-12D54951C51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB7DD10-7B92-4D1A-8A9B-12D54951C51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB7DD10-7B92-4D1A-8A9B-12D54951C51A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
