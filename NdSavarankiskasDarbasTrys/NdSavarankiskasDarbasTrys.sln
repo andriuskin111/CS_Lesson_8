@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdSavarankiskasDarbasTrys", "NdSavarankiskasDarbasTrys\NdSavarankiskasDarbasTrys.csproj", "{B33672DA-AF92-45B6-BD74-B5D2074C7755}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointStruct", "PointStruct\PointStruct.csproj", "{2A9724BA-6BE1-457F-8B6D-3A305FE39840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NdSavarankiskasDarbasTrys.test", "NdSavarankiskasDarbasTrys.test\NdSavarankiskasDarbasTrys.test.csproj", "{0E8DDF46-F907-452F-BFDD-240A0DEB1A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleStruct", "RectangleStruct\RectangleStruct.csproj", "{FFDB6CF5-2FB5-4D4C-AF12-AADFFB73502C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B33672DA-AF92-45B6-BD74-B5D2074C7755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B33672DA-AF92-45B6-BD74-B5D2074C7755}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B33672DA-AF92-45B6-BD74-B5D2074C7755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A9724BA-6BE1-457F-8B6D-3A305FE39840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9724BA-6BE1-457F-8B6D-3A305FE39840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9724BA-6BE1-457F-8B6D-3A305FE39840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9724BA-6BE1-457F-8B6D-3A305FE39840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8DDF46-F907-452F-BFDD-240A0DEB1A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8DDF46-F907-452F-BFDD-240A0DEB1A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8DDF46-F907-452F-BFDD-240A0DEB1A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8DDF46-F907-452F-BFDD-240A0DEB1A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDB6CF5-2FB5-4D4C-AF12-AADFFB73502C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDB6CF5-2FB5-4D4C-AF12-AADFFB73502C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDB6CF5-2FB5-4D4C-AF12-AADFFB73502C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDB6CF5-2FB5-4D4C-AF12-AADFFB73502C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
