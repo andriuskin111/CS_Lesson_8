@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrekeStruct\PrekeStruct.csproj">
+      <Project>{dca8a2b5-d469-4f04-ab47-2b7866536122}</Project>
+      <Name>PrekeStruct</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

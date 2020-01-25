@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PrekeStruct;
 
 namespace NdStrukturosInkapsuliacija2.test
 {
     [TestClass]
-    public class UnitTest1
+    public class PrekeTest
     {
         [TestMethod]
         public void TestMethod1()
