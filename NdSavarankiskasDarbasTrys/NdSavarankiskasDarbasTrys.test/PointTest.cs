@@ -12,16 +12,10 @@ namespace NdSavarankiskasDarbasTrys.test
         public void TestuojamArTaskasYraStaciakampioViduje()
         {
             // Arrange
-
-            Point point;
-            point.koordinateX = 5;
-            point.koordinateY = 5;
-
-            Rectangle rectangle = new Rectangle();
-            rectangle.topLeft.koordinateX = 1;
-            rectangle.topLeft.koordinateY = 1;
-            rectangle.bottomRight.koordinateX = 10;
-            rectangle.bottomRight.koordinateY = 10;
+            Point point = new Point(10, 20);
+            Point topLeft = new Point(1, 8);
+            Point bootomRight = new Point(20, 40);
+            Rectangle rectangle = new Rectangle(topLeft, bootomRight);
 
             //Act
             bool rezultatas = rectangle.IsPointInRectangle(point);
@@ -34,16 +28,10 @@ namespace NdSavarankiskasDarbasTrys.test
         public void TestuojamArTaskasNeraStaciakampioViduje()
         {
             // Arrange
-
-            Point point;
-            point.koordinateX = 20;
-            point.koordinateY = 1;
-
-            Rectangle rectangle = new Rectangle();
-            rectangle.topLeft.koordinateX = 1;
-            rectangle.topLeft.koordinateY = 1;
-            rectangle.bottomRight.koordinateX = 10;
-            rectangle.bottomRight.koordinateY = 10;
+            Point point = new Point(0, 20);
+            Point topLeft = new Point(1, 8);
+            Point bootomRight = new Point(20, 40);
+            Rectangle rectangle = new Rectangle(topLeft, bootomRight);
 
             //Act
             bool rezultatas = rectangle.IsPointInRectangle(point);

@@ -9,18 +9,23 @@ namespace RectangleStruct
 {
     public struct Rectangle
     {
-        public Point topLeft;
-        public Point bottomRight;
+        private Point _topLeft;
+        private Point _bottomRight;
 
+        public Rectangle(Point topLeft, Point bootomRight)
+        {
+            _topLeft = topLeft;
+            _bottomRight = bootomRight;
+        }
         public Point TopLeft {
-            get { return topLeft; }
-            set { }
+            get { return _topLeft; }
+            private set { }
         }
 
         public Point BottomRight
         {
-            get { return bottomRight; }
-            set { }
+            get { return _bottomRight; }
+            private set { }
         }
 
         public bool IsPointInRectangle(Point taskas)

@@ -12,15 +12,10 @@ namespace NdSavarankiskasDarbasTrys
     {
         static void Main(string[] args)
         {
-            Point point;            
-            point.koordinateX = 10;
-            point.koordinateY = 20;
-
-            Rectangle rectangle = new Rectangle();
-            rectangle.topLeft.koordinateX = 1;
-            rectangle.topLeft.koordinateY = 8;
-            rectangle.bottomRight.koordinateX = 20;
-            rectangle.bottomRight.koordinateY = 40;
+            Point point = new Point(10, 20);            
+            Point topLeft = new Point(1, 8);
+            Point bootomRight = new Point(20, 40);
+            Rectangle rectangle = new Rectangle(topLeft, bootomRight);
 
             Console.WriteLine($"Point is in Rectangle: {rectangle.IsPointInRectangle(point)}");
 
