@@ -19,5 +19,18 @@ namespace NdStrukturosInkapsuliacija1.test
             // Assert
             Assert.AreEqual(kainaViso, pirkinys1.KainaViso);
         }
+
+        [TestMethod]
+        public void TestuojamArTeisingaiSuskaiciosVisaPirkiniuKainaKaiNeraPrekiu()
+        {
+            // Arrange
+            Pirkinys pirkinys1 = new Pirkinys("", 0, 0);
+
+            // Act
+            double kainaViso = 0;
+
+            // Assert
+            Assert.AreEqual(kainaViso, pirkinys1.KainaViso);
+        }
     }
 }
