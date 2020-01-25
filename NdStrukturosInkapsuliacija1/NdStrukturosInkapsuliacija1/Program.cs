@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PirkinysStruct;
 
 namespace NdStrukturosInkapsuliacija1
 {
@@ -10,6 +11,11 @@ namespace NdStrukturosInkapsuliacija1
     {
         static void Main(string[] args)
         {
+            Pirkinys pirkinys1 = new Pirkinys("Alus", 5, 1.5);
+
+            Console.WriteLine($"Preke: {pirkinys1.PrekesPavadinimas}, Kiekis: {pirkinys1.Kiekis}, KainaViso: {pirkinys1.KainaViso}");
+
+            Console.ReadLine();
         }
     }
 }
