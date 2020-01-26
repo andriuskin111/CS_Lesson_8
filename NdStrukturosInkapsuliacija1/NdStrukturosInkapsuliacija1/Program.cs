@@ -11,7 +11,7 @@ namespace NdStrukturosInkapsuliacija1
     {
         static void Main(string[] args)
         {
-            Pirkinys pirkinys1 = new Pirkinys("Alus", 5, 1.5);
+            Pirkinys pirkinys1 = new Pirkinys("Alus", 5, 1.5m);
 
             Console.WriteLine($"Preke: {pirkinys1.PrekesPavadinimas}, Kiekis: {pirkinys1.Kiekis}, KainaViso: {pirkinys1.KainaViso}");
 

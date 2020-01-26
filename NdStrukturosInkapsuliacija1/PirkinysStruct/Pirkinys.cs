@@ -11,9 +11,9 @@ namespace PirkinysStruct
     {
         private string _prekesPavadinimas;
         private int _kiekis;
-        private double _kainaVieneto;
+        private decimal _kainaVieneto;
 
-        public Pirkinys(string prekesPavadinimas, int kiekis, double kainaVieneto)
+        public Pirkinys(string prekesPavadinimas, int kiekis, decimal kainaVieneto)
         {
             _prekesPavadinimas = prekesPavadinimas;
             _kiekis = kiekis;
@@ -32,13 +32,13 @@ namespace PirkinysStruct
             private set { }
         }
 
-        public double KainaVieneto
+        public decimal KainaVieneto
         {
             get { return _kainaVieneto; }
             private set { }
         }
 
-        public double KainaViso
+        public decimal KainaViso
         {
             get { return KainaVieneto * Kiekis; }
             private set { }

@@ -11,10 +11,10 @@ namespace NdStrukturosInkapsuliacija1.test
         public void TestuojamArTeisingaiSuskaiciosVisaPirkiniuKaina()
         {
             // Arrange
-            Pirkinys pirkinys1 = new Pirkinys("Alus", 5, 2);
+            Pirkinys pirkinys1 = new Pirkinys("Alus", 5, 2m);
 
             // Act
-            double kainaViso = 10;
+            decimal kainaViso = 10;
 
             // Assert
             Assert.AreEqual(kainaViso, pirkinys1.KainaViso);
@@ -24,10 +24,10 @@ namespace NdStrukturosInkapsuliacija1.test
         public void TestuojamArTeisingaiSuskaiciosVisaPirkiniuKainaKaiNeraPrekiu()
         {
             // Arrange
-            Pirkinys pirkinys1 = new Pirkinys("", 0, 0);
+            Pirkinys pirkinys1 = new Pirkinys("", 0, 0m);
 
             // Act
-            double kainaViso = 0;
+            decimal kainaViso = 0;
 
             // Assert
             Assert.AreEqual(kainaViso, pirkinys1.KainaViso);
