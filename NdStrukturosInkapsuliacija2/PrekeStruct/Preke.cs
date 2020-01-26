@@ -10,13 +10,13 @@ namespace PrekeStruct
     {
         private string _prekesPavadinimas;
         private int _kiekis;
-        private double _kainaVieneto;
+        private decimal _kainaVieneto;
 
-        public Preke(string preke, int kiekis, double kaina)
+        public Preke(string preke, int kiekis, decimal kainaVieneto)
         {
             _prekesPavadinimas = preke;
             _kiekis = kiekis;
-            _kainaVieneto = kaina;               
+            _kainaVieneto = kainaVieneto;
         }
 
         public string PrekesPavadinimas
@@ -28,6 +28,12 @@ namespace PrekeStruct
         public int Kiekis
         {
             get { return _kiekis; }
+            private set { }
+        }
+
+        public decimal KainaVieneto
+        {
+            get { return _kainaVieneto; }
             private set { }
         }
     }
