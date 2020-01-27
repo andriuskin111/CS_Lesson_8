@@ -26,6 +26,7 @@ namespace NdStrukturosInkapsuliacija2
             bool vartotojasNepasirinkoIseiti = true;
             int veiksmas;
             int prekesNumeris;
+            int prekesKiekis;
             int meniuPirmas = 1;
             int meniuNumeris = 2;
             int meniuKiekis = 3;
@@ -81,11 +82,29 @@ namespace NdStrukturosInkapsuliacija2
                 }
                 else if (veiksmas == 4)
                 {
+                    ParodytiPrekiuSarasa(prekiuSarasas, prekes);
+
+                    Console.WriteLine("Iveskite norimos koreguoti prekes numeri");
+
+                    prekesNumeris = GrazintiIvestusIntegerDuomenis(meniuNumeris);
+
+                    Console.WriteLine("Iveskite koreguojamos prekes nauja kieki");
+
+                    prekesKiekis = GrazintiIvestusIntegerDuomenis(meniuKiekis);
+
+                    string pasirinktosPrekePavadinimas = prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas.ToString();
+                    decimal pasirinktosPrekesKainaVieneto = prekiuSarasas.ElementAt(prekesNumeris - 1).KainaVieneto;
+
+                    prekiuSarasas[prekesNumeris - 1] = new Preke(pasirinktosPrekePavadinimas, prekesKiekis, pasirinktosPrekesKainaVieneto);
+
+                    Console.WriteLine($"Prekes Nr: {prekesNumeris} {prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas} kiekis pakeistas");
+
+                    ParodytiPrekiuSarasa(prekiuSarasas, prekes);
 
                 }
                 else
                 {
-
+                    Console.WriteLine("Nezinoma klaida, skambinkite 112 :)");
                 }
 
             }

@@ -28,7 +28,7 @@ namespace PrekeStruct
         public int Kiekis
         {
             get { return _kiekis; }
-            private set { }
+            set { Kiekis = value; }
         }
 
         public decimal KainaVieneto
