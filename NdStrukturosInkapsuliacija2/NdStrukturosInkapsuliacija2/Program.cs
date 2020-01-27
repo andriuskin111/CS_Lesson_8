@@ -30,6 +30,8 @@ namespace NdStrukturosInkapsuliacija2
             int meniuPirmas = 1;
             int meniuNumeris = 2;
             int meniuKiekis = 3;
+            int ivedamasPrekesKiekis;
+            decimal ivedamosPrekesKainaVieneto;
 
             while (vartotojasNepasirinkoIseiti)
             {                
@@ -37,10 +39,7 @@ namespace NdStrukturosInkapsuliacija2
                     " [3]-Istrinti preke, [4]-Koreguoti kieki");
 
                 veiksmas = GrazintiIvestusIntegerDuomenis(meniuPirmas);
-
-                int ivedamasPrekesKiekis;
-                decimal ivedamosPrekesKainaVieneto;
-
+                
                 if (veiksmas == 1)
                 {
                     Console.WriteLine("Iveskite ivedamos prekes pavadinima:");
@@ -56,6 +55,8 @@ namespace NdStrukturosInkapsuliacija2
                     ivedamosPrekesKainaVieneto = GrazintiIvestusDecimalDuomenis();
 
                     prekiuSarasas.Add(new Preke(ivedamosPrekesPavadinimas, ivedamasPrekesKiekis, ivedamosPrekesKainaVieneto));
+
+                    Console.WriteLine("Preke prideta");
 
                     ParodytiPrekiuSarasa(prekiuSarasas, prekes);
                     vartotojasNepasirinkoIseiti =  PasirinktiArIseitiIsProgramosArTesti();
@@ -88,7 +89,7 @@ namespace NdStrukturosInkapsuliacija2
 
                     prekesNumeris = GrazintiIvestusIntegerDuomenis(meniuNumeris);
 
-                    Console.WriteLine("Iveskite koreguojamos prekes nauja kieki");
+                    Console.WriteLine($"Iveskite prekes {prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas} nauja kieki");
 
                     prekesKiekis = GrazintiIvestusIntegerDuomenis(meniuKiekis);
 

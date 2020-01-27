@@ -60,6 +60,10 @@
       <Project>{dca8a2b5-d469-4f04-ab47-2b7866536122}</Project>
       <Name>PrekeStruct</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PrekiuSarasasStruct\PrekiuSarasasStruct.csproj">
+      <Project>{3ff0c949-f869-4b55-b1a1-b2f10b484df9}</Project>
+      <Name>PrekiuSarasasStruct</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
