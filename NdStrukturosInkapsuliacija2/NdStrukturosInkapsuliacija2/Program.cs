@@ -10,6 +10,10 @@ namespace NdStrukturosInkapsuliacija2
 {
     class Program
     {
+        private static int operacijosTipasMeniu = 1;
+        private static int operacijosTipasPrekesNumeris = 2;
+        private static int operacijosTipasPrekesKiekis = 3;
+
         static void Main(string[] args)
         {
             PrekiuSarasas prekes;
@@ -27,9 +31,7 @@ namespace NdStrukturosInkapsuliacija2
             int veiksmas;
             int prekesNumeris;
             int prekesKiekis;
-            int meniuPirmas = 1;
-            int meniuNumeris = 2;
-            int meniuKiekis = 3;
+            
             int ivedamasPrekesKiekis;
             decimal ivedamosPrekesKainaVieneto;
 
@@ -38,7 +40,7 @@ namespace NdStrukturosInkapsuliacija2
                 Console.WriteLine("Pasirinkite veiksma: [1]-Prideti preke, [2]-Parodyti visa sarasa," +
                     " [3]-Istrinti preke, [4]-Koreguoti kieki");
 
-                veiksmas = GrazintiIvestusIntegerDuomenis(meniuPirmas);
+                veiksmas = ApdorotiVartotojoIvesti(operacijosTipasMeniu);
                 
                 if (veiksmas == 1)
                 {
@@ -48,11 +50,11 @@ namespace NdStrukturosInkapsuliacija2
 
                     Console.WriteLine("Iveskite ivedamos prekes kieki:");
 
-                    ivedamasPrekesKiekis = GrazintiIvestusIntegerDuomenis(meniuKiekis);
+                    ivedamasPrekesKiekis = ApdorotiVartotojoIvesti(operacijosTipasPrekesKiekis);
 
                     Console.WriteLine("Iveskite ivedamos prekes vieneto kaina:");
 
-                    ivedamosPrekesKainaVieneto = GrazintiIvestusDecimalDuomenis();
+                    ivedamosPrekesKainaVieneto = ApdorotiVartotojoIvesti();
 
                     prekiuSarasas.Add(new Preke(ivedamosPrekesPavadinimas, ivedamasPrekesKiekis, ivedamosPrekesKainaVieneto));
 
@@ -72,7 +74,7 @@ namespace NdStrukturosInkapsuliacija2
 
                     Console.WriteLine("Iveskite norimos istrinti prekes numeri:");
 
-                    prekesNumeris = GrazintiIvestusIntegerDuomenis(meniuNumeris);
+                    prekesNumeris = ApdorotiVartotojoIvesti(operacijosTipasPrekesNumeris);
 
                     Console.WriteLine($"Preke Nr: {prekesNumeris} {prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas} istrinta");
 
@@ -87,11 +89,11 @@ namespace NdStrukturosInkapsuliacija2
 
                     Console.WriteLine("Iveskite norimos koreguoti prekes numeri");
 
-                    prekesNumeris = GrazintiIvestusIntegerDuomenis(meniuNumeris);
+                    prekesNumeris = ApdorotiVartotojoIvesti(operacijosTipasPrekesNumeris);
 
                     Console.WriteLine($"Iveskite prekes {prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas} nauja kieki");
 
-                    prekesKiekis = GrazintiIvestusIntegerDuomenis(meniuKiekis);
+                    prekesKiekis = ApdorotiVartotojoIvesti(operacijosTipasPrekesKiekis);
 
                     string pasirinktosPrekePavadinimas = prekiuSarasas.ElementAt(prekesNumeris - 1).PrekesPavadinimas.ToString();
                     decimal pasirinktosPrekesKainaVieneto = prekiuSarasas.ElementAt(prekesNumeris - 1).KainaVieneto;
@@ -113,7 +115,7 @@ namespace NdStrukturosInkapsuliacija2
             Environment.Exit(0);
         }
 
-        public static decimal GrazintiIvestusDecimalDuomenis()
+        public static decimal ApdorotiVartotojoIvesti()
         {
             bool ivestiDuomenysTeisingi = false;
             decimal ivestiDuomenys = 0;
@@ -141,7 +143,7 @@ namespace NdStrukturosInkapsuliacija2
             return ivestiDuomenys;
         }
 
-        public static int GrazintiIvestusIntegerDuomenis(int meniu)
+        public static int ApdorotiVartotojoIvesti(int operacijosTipas)
         {
             bool ivestiDuomenysTeisingi = false;
             int ivestiDuomenys = 0;
@@ -154,44 +156,17 @@ namespace NdStrukturosInkapsuliacija2
 
                     ivestiDuomenysTeisingi = false;
                 }
-                else if (meniu == 1)
+                else if (operacijosTipas == operacijosTipasMeniu)
                 {
-                    if (ivestiDuomenys < 1 || ivestiDuomenys > 4)
-                    {
-                        Console.WriteLine("Ivestas neteisingas skaicius, pakartokite");
-
-                        ivestiDuomenysTeisingi = false;
-                    }
-                    else
-                    {
-                        ivestiDuomenysTeisingi = true;
-                    }
+                   ivestiDuomenysTeisingi =  PatikrintiArIvestiSkaiciaiNustatytoseRibose(ivestiDuomenys);
                 }
-                else if (meniu == 2)
+                else if (operacijosTipas == operacijosTipasPrekesNumeris)
                 {
-                    if (ivestiDuomenys < 1)
-                    {
-                        Console.WriteLine("Prekes numeris negali buti mazesnis uz 1, pakartokite");
-
-                        ivestiDuomenysTeisingi = false;
-                    }
-                    else
-                    {
-                        ivestiDuomenysTeisingi = true;
-                    }
+                    ivestiDuomenysTeisingi = PatikrintiArIvestiSkaiciaiDaugiauUzNuli(ivestiDuomenys);
                 }
-                else if (meniu == 3)
+                else if (operacijosTipas == operacijosTipasPrekesKiekis)
                 {
-                    if (ivestiDuomenys < 0)
-                    {
-                        Console.WriteLine("Prekiu kiekis negali buti neigiamas, pakartokite");
-
-                        ivestiDuomenysTeisingi = false;
-                    }
-                    else
-                    {
-                        ivestiDuomenysTeisingi = true;
-                    }                   
+                    ivestiDuomenysTeisingi = PatikrintiArIvestasSkaiciusNeraNeigiamas(ivestiDuomenys);              
                 }
                 else
                 {
@@ -200,6 +175,60 @@ namespace NdStrukturosInkapsuliacija2
             }
 
             return ivestiDuomenys;
+        }
+
+        public static bool PatikrintiArIvestiSkaiciaiNustatytoseRibose(int ivestiDuomenys)
+        {
+            bool ivestiDuomenysTeisingi;
+
+            if (ivestiDuomenys < 1 || ivestiDuomenys > 4)
+            {
+                Console.WriteLine("Ivestas neteisingas skaicius, pakartokite");
+
+                ivestiDuomenysTeisingi = false;
+            }
+            else
+            {
+                ivestiDuomenysTeisingi = true;
+            }
+
+            return ivestiDuomenysTeisingi;
+        }
+
+        public static bool PatikrintiArIvestiSkaiciaiDaugiauUzNuli(int ivestiDuomenys)
+        {
+            bool ivestiDuomenysTeisingi;
+
+            if (ivestiDuomenys < 1)
+            {
+                Console.WriteLine("Prekes numeris negali buti mazesnis uz 1, pakartokite");
+
+                ivestiDuomenysTeisingi = false;
+            }
+            else
+            {
+                ivestiDuomenysTeisingi = true;
+            }
+
+            return ivestiDuomenysTeisingi;
+        }
+
+        public static bool PatikrintiArIvestasSkaiciusNeraNeigiamas(int ivestiDuomenys)
+        {
+            bool ivestiDuomenysTeisingi;
+
+            if (ivestiDuomenys < 0)
+            {
+                Console.WriteLine("Prekiu kiekis negali buti neigiamas, pakartokite");
+
+                ivestiDuomenysTeisingi = false;
+            }
+            else
+            {
+                ivestiDuomenysTeisingi = true;
+            }
+
+            return ivestiDuomenysTeisingi;
         }
 
         public static bool PasirinktiArIseitiIsProgramosArTesti()
